@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@400;700;900&display=swap" rel="stylesheet"> 
+    <title>Coffee Roasters | Design System</title>
+</head>
+<body>
+    <div class="container">
+        <!-- The Logo -->
+        <div>
+            <img src="images/shared/desktop/logo.svg">
+            <h1 class="ff-fraunces fs-700">Design System</h2>
+        </div>
+
+        <!-- Colors -->
+        <div class="grid fw-bold" style="grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto; margin-top: 10rem;">
+            <div>
+                <div class="flex bg-dark-cyan ff-fraunces fs-500 fw-bold border-radius-10" style=" padding: 5rem 1.5rem 1.5rem; align-items: flex-end; justify-content: space-between;">
+                    <p class="text-light-cream">#0E8784</p>
+                    <p style="color: white; opacity: .5;">Dark Cyan</p>
+                </div>
+                <p style="margin-top: 1rem;"><span class="fw-regular" style="margin-right: 4rem;">RGB</span> 14, 135, 132</p>
+                <p style="margin-top: 1rem;"><span class="fw-regular" style="margin-right: 4rem;">HSL</span> 179°, 81%, 29%</p>
+            </div>
+            <div>
+                <div class="flex bg-light-cyan ff-fraunces fs-500 fw-bold border-radius-10" style=" padding: 5rem 1.5rem 1.5rem; align-items: flex-end; justify-content: space-between;">
+                    <p class="text-light-cream">#66D2CF</p>
+                    <p style="color: white; opacity: .5;">Light Cyan</p>
+                </div>
+                <p style="margin-top: 1rem;"><span class="fw-regular" style="margin-right: 4rem;">RGB</span> 101, 210, 207</p>
+                <p style="margin-top: 1rem;"><span class="fw-regular" style="margin-right: 4rem;">HSL</span> 178°, 55%, 61%</p>
+            </div>
+            <div>
+                <div class="flex bg-dark-grey-blue ff-fraunces fs-500 fw-bold border-radius-10" style=" padding: 5rem 1.5rem 1.5rem; align-items: flex-end; justify-content: space-between;">
+                    <p class="text-light-cream">#333D4B</p>
+                    <p style="color: white; opacity: .5;">Dark Grey Blue</p>
+                </div>
+                <p style="margin-top: 1rem;"><span class="fw-regular" style="margin-right: 4rem;">RGB</span> 55, 61, 75</p>
+                <p style="margin-top: 1rem;"><span class="fw-regular" style="margin-right: 4rem;">HSL</span> 215°, 19%, 25%</p>
+            </div>
+            <div>
+                <div class="flex bg-pale-orange text-dark-grey-blue ff-fraunces fs-500 fw-bold border-radius-10" style=" padding: 5rem 1.5rem 1.5rem; align-items: flex-end; justify-content: space-between;">
+                    <p>#FDD6BA</p>
+                    <p style="opacity: .5;">Pale Orange</p>
+                </div>
+                <p style="margin-top: 1rem;"><span class="fw-regular" style="margin-right: 4rem;">RGB</span>253, 214, 186</p>
+                <p style="margin-top: 1rem;"><span class="fw-regular" style="margin-right: 4rem;">HSL</span>25°, 94%, 86%</p>
+            </div>
+            <div>
+                <div class="flex bg-light-cream text-dark-grey-blue ff-fraunces fs-500 fw-bold border-radius-10" style=" padding: 5rem 1.5rem 1.5rem; align-items: flex-end; justify-content: space-between;">
+                    <p>#FEFCF7</p>
+                    <p style="opacity: .5;">Light Cream</p>
+                </div>
+                <p style="margin-top: 1rem;"><span class="fw-regular" style="margin-right: 4rem;">RGB</span>254, 252, 247</p>
+                <p style="margin-top: 1rem;"><span class="fw-regular" style="margin-right: 4rem;">HSL</span>43°, 78%, 98%</p>
+            </div>
+            <div>
+                <div class="flex bg-grey ff-fraunces fs-500 fw-bold border-radius-10" style="padding: 5rem 1.5rem 1.5rem; align-items: flex-end; justify-content: space-between;">
+                    <p class="text-light-cream">#83888F</p>
+                    <p style="opacity: .5;">Grey</p>
+                </div>
+                <p style="margin-top: 1rem;"><span class="fw-regular" style="margin-right: 4rem;">RGB</span>131, 136, 143</p>
+                <p style="margin-top: 1rem;"><span class="fw-regular" style="margin-right: 4rem;">HSL</span>215°, 5%, 54%</p>
+            </div>
+        </div>
+
+        <!-- Typography -->
+        <div class="flex" style="margin-top: 10rem; gap: var(--gap, 0);">
+            <div class="bg-dark-cyan text-light-cream ff-fraunces fw-black" style="width: 60%; padding: 2rem; border-radius: 10px 0 0 10px;">
+                <h1 class="fs-700" style="margin-bottom: 2rem;">Fraunces</h1>
+                <p class="fs-500" style="opacity: .5;">
+                    A B C D E F G H I J K L M N O P Q R S T U V W
+                    X Y Z a b c d e f g h i j k l m n o p q r s t u v w
+                    xy z 1 2 3 4 5 6 7 8 9 0 ! @ # $ % ^ & * ( ) _ +</p>
+            </div>
+            <div class="bg-dark-grey-blue text-light-cream ff-barlow fw-regular" style="width: 40%; padding: 2rem; border-radius: 0 10px 10px 0;">
+                <h1 class="fs-600" style="margin-bottom: 2rem;">Barlow</h1>
+                <p class="fs-400" style="opacity: .5; letter-spacing: 3px;">
+                    A B C D E F G H I J K L M N O P Q R S T U V W X Y
+                    Z a b c d e f g h i j k l m n o p q r s t u v w x y z 1
+                    2 3 4 5 6 7 8 9 0 ! @ # $ % ^  & * ( ) _ +</p>
+            </div>
+        </div>
+
+        <div class="flex" style="margin-top: 5rem; gap: var(--gap, 4rem);">
+            <div class="flow" style="width: 60%;">
+                <div>
+                    <p><span class="fw-black" style="margin-right: 2rem;">Title Alternate Big</span> Fraunces Black, 150px, 72px line, All lowercase</p>
+                    <p class="fs-900 ff-fraunces fw-black text-grey">dolor sit</p>
+                </div> 
+                <div>
+                    <p><span class="fw-black" style="margin-right: 2rem;">H1</span> Fraunces Black, 72px, 72px line</p>
+                    <p class="fs-800 ff-fraunces fw-black line-h-800 text-dark-grey-blue">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div>
+                    <p><span class="fw-black" style="margin-right: 2rem;">H2</span> Fraunces Black, 40px, 48px line</p>
+                    <p class="fs-700 ff-fraunces fw-black line-h-700 text-dark-grey-blue">Lorem ipsum dolor sit amet consectetuer</p>
+                </div>
+                <div>
+                    <p><span class="fw-black" style="margin-right: 2rem;">H3</span> Fraunces Black, 32px, 36px line</p>
+                    <p class="fs-600 ff-fraunces fw-black line-h-500 text-dark-grey-blue">Lorem ipsum dolor sit amet consectetuer adipiscing</p>
+                </div>
+                <div>
+                    <p><span class="fw-black" style="margin-right: 2rem;">H4</span> Fraunces Black, 32px, 36px line</p>
+                    <p class="fs-500 ff-fraunces fw-black line-h-400 text-dark-grey-blue">Lorem ipsum dolor sit amet consectetuer</p>
+                </div>
+            </div>
+
+            <div style="width: 40%;">
+                <p><span class="fw-black" style="margin-right: 2rem;">Body</span> Barlow Regular, 16px, 26px line</p>
+                <p class="fs-400 line-h-400 paragraph-break text-dark-grey-blue">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque 
+                    aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, 
+                    ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. 
+                    Nullam mollis. Ut justo. Suspendisse potenti.Sed egestas, ante et vulputate volutpat, eros pede 
+                    semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo 
+                    quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. 
+                    Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare 
+                    nisl.
+                </p>
+                <p class="fs-400 line-h-400 paragraph-break text-dark-grey-blue">
+                    Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.Lorem ipsum dolor sit amet, 
+                    consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. 
+                    In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin 
+                    laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. 
+                    Ut justo. Suspendisse potenti.
+                </p>
+                <p class="fs-400 line-h-400 paragraph-break text-dark-grey-blue">
+                    Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. 
+                    Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum 
+                    hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque 
+                    euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus 
+                    sed, urna.
+                </p>
+
+                <div style="margin-top: 2rem;">
+                    <p><span class="fw-black" style="margin-right: 2rem;">Navigation Menu</span> Barlow Bold, 12px, 15px line, 1.0 Character</p>
+                    <nav style="margin-top: 1rem;">
+                        <ul class="flex uppercase fw-bold" style="gap: var(--gap, 2rem);">
+                            <li><a class="fs-300 letter-spacing-1 text-grey" href="#">home</a></li>
+                            <li><a class="fs-300 letter-spacing-1 text-grey" href="#">about us</a></li>
+                            <li><a class="fs-300 letter-spacing-1 text-grey" href="#">create your plan</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Components -->
+        <div class="flow">
+
+            <div class="flex" style="margin-top: 5rem;">
+                <div class="flow" style="width: 50%;">
+                    <p class="ff-barlow fw-regular">Main Button Default and Hover</p>
+                    <button class="btn ff-fraunces fw-black bg-dark-cyan text-light-cream border-radius-8">Button</button>
+                </div>
+                <div class="flow" style="width: 50%;">
+                    <p class="ff-barlow fw-regular">Main Button Disabled</p>
+                    <button class="btn-disabled ff-fraunces fw-black bg-grey text-light-cream border-radius-8">Button</button>
+                </div>
+            </div>
+
+            <div class="flex" style="margin-top: 2rem;">
+                <div class="flow" style="width: 50%;">
+                    <p>Big Selection Option Default and Hover</p>
+                    <div class="card bg-cream text-dark-grey-blue border-radius-10">
+                        <h4 class="ff-fraunces line-h-400 fs-500" style="margin-bottom: 2rem;">Option</h4>
+                        <p class="ff-barlow fs-400">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="flow" style="width: 50%;">
+                    <p>Big Selection Option Active</p>
+                    <div class="card-active bg-cream text-dark-grey-blue border-radius-10">
+                        <h4 class="ff-fraunces line-h-400 fs-500" style="margin-bottom: 2rem;">Option</h4>
+                        <p class="ff-barlow fs-400">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem; margin-bottom: 4rem;">
+                <div class="flex">
+                    <div style="width: 33%;">
+                        <p>Accordion Menu Closed Default and Hover</p>
+                        <div class="accordion-menu flex" style="align-items: center;">
+                            <h2 class="ff-fraunces fs-700 fw-black text-grey">Sample Menu</h2>
+                            <svg class="arrow" width="19" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z" fill="#0E8784" fill-rule="nonzero"/></svg>
+                        </div>
+                    </div>
+                    <div style="width: 33%;">
+                        <p>Accordion Menu Open Default and Hover</p>
+                        <div class="accordion-menu flex" style="align-items: center;">
+                            <h2 class="ff-fraunces fs-700 fw-black text-grey">Sample Menu</h2>
+                            <svg class="arrow arrow-rotate" width="19" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z" fill="#0E8784" fill-rule="nonzero"/></svg>
+                        </div>
+                    </div>
+                    <div style="width: 33%;">
+                        <p>Accordion Menu Open Default and Hover</p>
+                        <div class="accordion-menu-disabled flex" style="align-items: center;">
+                            <h2 class="ff-fraunces fs-700 fw-black text-grey">Sample Menu</h2>
+                            <svg class="arrow arrow-rotate" width="19" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z" fill="#0E8784" fill-rule="nonzero"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+
+</html>
+
