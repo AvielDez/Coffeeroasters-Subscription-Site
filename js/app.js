@@ -16,6 +16,8 @@ let weeklyPrice = 0.00
 let biWeeklyPrice = 0.00
 let monthlyPrice = 0.00
 
+let totalPrice = 0.00
+
 let allQuestionsAnswered = false
 
 //General Event Listener
@@ -181,13 +183,26 @@ function createMyPlanBtn(){
     if(checkIfAllQuestionsAnswered()){
         createPlanBtn.classList.remove('btn-disabled')
         createPlanBtn.addEventListener('click', ()=>{
-            //Make Modal and transparent background visible and prevent scrolling and any clicking outside modal.
             checkoutModal.classList.remove('modal-hidden')
             checkoutModalBg.classList.remove('modal-hidden')
+            calculateTotalPrice()
         })
         checkoutModalBg.addEventListener('click', ()=>{
             checkoutModal.classList.add('modal-hidden')
             checkoutModalBg.classList.add('modal-hidden')
         })
     }
+}
+
+function calculateTotalPrice(){
+    const totalPriceElement = document.getElementById('total-price-p')
+    if(currentChoiceArray.question5 === 'Every week'){
+        totalPrice = weeklyPrice * 4
+    }
+    else if(currentChoiceArray.question5 === 'Every 2 weeks'){
+        totalPrice = biWeeklyPrice * 2
+    }else{
+        totalPrice = monthlyPrice
+    }
+    totalPriceElement.innerText = `$${totalPrice.toFixed(2)} / mo `
 }
