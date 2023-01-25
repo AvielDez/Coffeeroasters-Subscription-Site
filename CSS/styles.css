@@ -106,7 +106,7 @@ textarea{
 .container {
 	padding-inline: 1.5em;
 	margin-inline: auto;
-	max-width: 80rem;
+	max-width: 90rem;
 }
 
 .flow > *:not(:first-child) {
@@ -188,12 +188,14 @@ a:hover{
 
 /*Button*/
 .btn{
+    display: grid;
+    place-content: center;
    width: 217px;
    height: 56px;
    border: none;
    cursor: pointer;
    font-size: 1.125rem;
-   transition: background-color 300ms ease-in-out;
+   transition: background-color 150ms ease-in-out;
 }
 
 .btn:hover,  
@@ -211,21 +213,18 @@ a:hover{
 
 /*Card*/
 .card{
-    width: 228px;
-    height: 250px; 
+    width: 100%;
     padding: 1.5rem;
-    transition: background-color 300ms ease-in-out;
+    transition: background-color 150ms ease-in-out;
     cursor: pointer;
 }
 
-.card:hover,
-.card:focus{
+.card-hover:hover{
     background-color: hsl(var(--clr-pale-orange));
 }
 
 .card-active{
-    width: 228px;
-    height: 250px; 
+    width: 100%;
     padding: 1.5rem;
     color: hsl(var(--clr-light-cream));
     background-color: hsl(var(--clr-dark-cyan));
@@ -235,18 +234,27 @@ a:hover{
 /*Accordion Menu*/
 
 .accordion-menu{
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--fs-400);
     cursor: pointer;
+}
+
+.arrow{
+    width: 1.25rem;
+    transition: transform 150ms ease-in-out;
 }
 
 /*Color Transition*/
 .arrow path{
-    transition: fill 300ms ease-in-out;
+    transition: fill 150ms ease-in-out;
 }
 
 /*rotate Transition*/
 .arrow-rotate{
-   transition: transform 300ms ease-in-out;
-   transform: rotate(180deg);
+    transform-origin: center;
+    transform: rotate(180deg); 
 }
 
 /*Hover Color Transition*/
@@ -260,6 +268,9 @@ a:hover{
     cursor: default;
 }
 
+.accordion-item-container > *:not(:first-child){
+    margin-top: 1rem;
+}
 
 /*Header - All Pages*/
 nav{
@@ -322,6 +333,14 @@ nav{
 }
 
 .hidden{
+    display: none;
+}
+
+.card-hidden{
+    display: none;
+}
+
+.modal-hidden{
     display: none;
 }
 
@@ -432,13 +451,23 @@ main{
     align-items: center;
 }
 
+.three-item-layout-alt{
+    padding: 1rem;
+}
+
 .three-item-layout-container{
     flex-direction: column;
+    gap: 2rem;
 }
 
 .three-item-layout-item{
-    margin-top: 4rem;
+    margin-bottom: 3rem;
 }
+
+.three-item-layout-item > *:not(:first-child){
+    margin-top: 2rem;
+}
+
 
 /* ------------------- */
 /*      About Layout   */
@@ -518,7 +547,56 @@ main{
     margin-top: 15rem;
 }
 .our-headquarters-img{
+    width: 70px;
     margin: 0 auto 4rem;
+}
+
+.three-item-layout-container{
+    max-width: 400px; 
+}
+
+/* ------------------- */
+/*      Plan Layout    */
+/* ------------------- */
+.accordion-container{
+    width: 100%;
+}
+
+.plan-container{
+    margin-top: 7.5rem;
+    width: 100%;
+    text-align: left;
+}
+.plan-index{
+    display: none;
+}
+
+.plan-data-summery{
+    font-size: var(--fs-500);
+    text-align: left;
+    margin-top: 7.5rem;
+    padding: 1rem;
+}
+
+.plan-order-summery-text{
+    text-align: left;
+    font-family: var(--ff-barlow);
+    font-size: var(--fs-300);
+    font-weight: var(--fw-regular);
+    margin-bottom: 1rem;
+}
+
+.create-plan{
+    margin-top: 2.5rem;
+    margin-left: auto;
+}
+
+.btn-disabled{
+    color: #FEFCF7;
+    background-color: #E2DEDB;
+}
+.btn-disabled:hover{
+    background-color: #E2DEDB;
 }
 /*Footer - all pages*/
 
@@ -546,13 +624,62 @@ main{
     gap: 1.5rem;
 }
 
+/* ------------------- */
+/*      Modal Layout    */
+/* ------------------- */
+.checkout-modal-transparent-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .75;
+    z-index: 1;
+}
+.checkout-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 90%;
+    height: 500px;
+    max-width: 540px;
+    z-index: 2;
+    text-align: left;
+}
+.checkout-modal-top{
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    padding: 1.5rem;
+}
+.checkout-modal-bottom{
+    border-radius: 0 0 8px 8px;
+    padding: 1.5rem;
+}
 
-
+.checkout-btn{
+    margin-top: 2rem;
+    margin-inline: auto;
+}
+.modal-checkout-btn-area{
+    flex-direction: column;
+}
+.total-price-p{
+    text-align: center;
+}
 
 @media(min-width: 768px){ 
     /* ------------------- */
     /*      Home Layout    */
     /* ------------------- */
+
+    .card-active{
+        width: 228px;
+        height: 250px; 
+    }
 
     /*Header*/
     nav{
@@ -591,10 +718,6 @@ main{
     }
     .nav-ul *:not(:first-child) {
         margin-top: 0;
-    }
-
-    .hidden{
-        display: block;
     }
 
     /*Main*/
@@ -674,6 +797,10 @@ main{
         margin-top: 7.5rem;
     }
 
+    .three-item-layout-alt{
+        padding: 4rem;
+    }
+
     .step-status-bar{
         margin-top: 3rem;
         width: 78%;
@@ -689,21 +816,26 @@ main{
         border-radius: 50%;
         border: 2px solid hsl(var(--clr-dark-cyan));
     }
+    .step-status-circle-alt{
+        background-color: hsl(var(--clr-light-cream) 0);
+    }
         
 
     .three-item-layout-container{
         flex-direction: row;
         justify-content: space-between;
-        align-items: stretch;
-        margin-top: 3rem;
+        align-items: baseline;
+        margin-top: 0;
+        max-width: 1000px;
         
     }
     
     .three-item-layout-item{
-        padding: 1rem;
+        margin-top: 0;
         max-width: 250px;
     }
 
+    
     /* ------------------- */
     /*      About Layout   */
     /* ------------------- */
@@ -754,6 +886,48 @@ main{
 
     .our-headquarters-img{
         margin: 0 auto 4rem 0;
+    }
+
+    /* ------------------- */
+    /*      Plan Layout    */
+    /* ------------------- */
+
+    .accordion-menu{
+        font-size: var(--fs-500);
+    }
+
+    .accordion-item-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 730px;
+    }
+
+    .accordion-item-container > *:not(:first-child){
+        margin-top: 0;
+    }
+
+    .card{
+        width: 228px;
+        height: 250px; 
+        padding: 1.5rem;
+        transition: background-color 300ms ease-in-out;
+        cursor: pointer;
+    }
+
+    .hidden{
+        display: block;
+    }
+
+    .plan-data-summery{
+        max-width: 800px;
+        margin-inline: auto;
+        font-size: var(--fs-500);
+        padding: 3rem;
+    }
+
+    .checkout-modal{
+        width: 70%;
     }
 
     /*Footer*/
@@ -864,6 +1038,45 @@ main{
         margin-top: 15rem;
     }
 
+    /* ------------------- */
+    /*      Plan Layout    */
+    /* ------------------- */
+
+    .plan-container{
+        font-size: var(--fs-600);
+        gap: 6rem;
+    }
+
+    .plan-index{
+        display: block;
+        width: 50%;
+        
+    }
+    .plan-index > h2{
+        transition: color 300ms;
+        display: flex;
+        gap: 2rem;
+    }
+    .plan-index > h2:hover{
+        cursor: pointer;
+        color: hsl(var(--clr-dark-grey-blue));
+    }
+    .plan-index > *:not(:last-child){
+        border-bottom: 2px solid grey;
+        padding-bottom: 1.5rem;
+    }
+
+    .plan-data-summery{
+        max-width: 100%;
+        margin-left: 38%;
+        font-size: var(--fs-500);
+        padding: 3rem;
+    }
+
+    .checkout-modal{
+        width: 50%;
+    }
+
     .nav-footer{
         flex-direction: row;
         padding: 2rem;
@@ -871,4 +1084,3 @@ main{
         margin-top: 10rem;
     }
 }
-
